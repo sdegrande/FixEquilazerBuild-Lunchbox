@@ -18,6 +18,10 @@
 #ifndef LUNCHBOX_TIME_H
 #define LUNCHBOX_TIME_H
 
+#ifndef __MSC_VER
+#include <time.h>
+#endif
+
 namespace lunchbox
 {
 #ifndef _MSC_VER
@@ -30,5 +34,5 @@ inline timespec convertToTimespec(const uint32_t milliSeconds)
     return ts;
 }
 #endif
-}
+} // namespace lunchbox
 #endif // LUNCHBOX_TIME_H
